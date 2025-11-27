@@ -1,11 +1,19 @@
 package Pertemuan14;
 
 public class Kafe207 {
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (kodePromo == "DISKON50") {
+            System.out.println("Selamat anda mendapatkan diskon 50%!");
+        } else if (kodePromo == "DISKON30") {
+            System.out.println("Selamat anda mendapatkan diskon 30%!");
+        } else {
+            System.out.println("Kode Invalid");
         }
 
         System.out.println("===== MENU RESTO KAFE =====");
@@ -19,6 +27,6 @@ public class Kafe207 {
         System.out.println("Silahkan pilih menu yang anda inginkan.");
     }
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true, "DISKON50");
     }
 }
